@@ -1,11 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Мой сайт</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личная страница</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Привет! Это мой сайт</h1>
-    <p>Скоро здесь будет больше контента...</p>
+    <div class="gothic-background"></div>
+    
+    <div class="container">
+        <header class="main-header">
+            <div class="ornament-top"></div>
+            <!-- ЗАМЕНИТЕ НА ВАШЕ ИМЯ -->
+            <h1 class="main-title">Тимоха бигбоб</h1>
+            <div class="ornament-bottom"></div>
+        </header>
+
+        <main class="content">
+            <section class="profile-section">
+                <div class="profile-frame">
+                    <!-- ЗАМЕНИТЕ НА ВАШЕ ФОТО ИЛИ УДАЛИТЕ ЭТОТ БЛОК -->
+                    <img src="profile-photo.jpg" alt="Тимоха бигбоб" class="profile-image">
+                </div>
+
+                <div class="info-section">
+                    <div class="gothic-border">
+                        <h2 class="section-title">О себе</h2>
+                        <div class="info-content">
+                            <!-- ЗАМЕНИТЕ НА ИНФОРМАЦИЮ О СЕБЕ -->
+                            <p>жесткий флекс сайтом сделанным за 5 минут, всех люблю идите нахуй<3</p>
+                            
+                            <!-- ЗАМЕНИТЕ НА ВАШУ ИНФОРМАЦИЮ -->
+                            <div class="personal-details">
+                                <p><span class="label">Возраст:</span> 17</p>
+                                <p><span class="label">Город:</span> Калининград сельма</p>
+                                <p><span class="label">Интересы:</span> игра в осу и war thunder</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-section">
+                        <h2 class="section-title">Контакты</h2>
+                        <div class="telegram-buttons">
+                            <!-- ЗАМЕНИТЕ ССЫЛКИ НА ВАШИ TELEGRAM АККАУНТЫ -->
+                            <a href="https://t.me/Dadruuuz" class="telegram-btn" target="_blank">
+                                <span class="btn-ornament">◆</span>
+                                TELEGRAM
+                                <span class="btn-ornament">◆</span>
+                            </a>
+                            <a href="https://t.me/govno_v_shtanah" class="telegram-btn" target="_blank">
+                                <span class="btn-ornament">◆</span>
+                                TELEGRAM2
+                                <span class="btn-ornament">◆</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="gothic-footer">
+            <div class="footer-ornament"></div>
+            <!-- ЗАМЕНИТЕ НА ВАШ КОПИРАЙТ ИЛИ УДАЛИТЕ -->
+            <p>&copy; 2024 Тимоха бигбоб</p>
+        </footer>
+    </div>
+
+    <script>
+        // Добавляем эффект плавного появления при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.content > *');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
 </body>
 </html>
